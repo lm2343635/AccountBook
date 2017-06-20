@@ -1,51 +1,152 @@
 //
 //  AppDelegate.m
-//  AccountBook
+//  GroupFinance
 //
-//  Created by lidaye on 19/06/2017.
-//  Copyright © 2017 Softlab. All rights reserved.
+//  Created by lidaye on 4/23/16.
+//  Copyright © 2016 limeng. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "Grouper-Bridging-Header.h"
+#import "Grouper-Swift.h"
+#import "Grouper.h"
 
 @interface AppDelegate ()
 
 @end
 
-@implementation AppDelegate
-
+@implementation AppDelegate {
+    Grouper *grouper;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    if(DEBUG) {
+        NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
+    }
+    
+    //Register Remote Notification, support iOS version after 8.0
+    [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
+    
+    grouper = [Grouper sharedInstance];
+    [grouper setAppDataStack:[self dataStack]];
+
+    if (DEBUG) {
+        GroupManager *group = grouper.group;
+        NSLog(@"Number of group members is %ld, threshold is %ld, deletion interval time is %ldm", (long)group.members, (long)group.defaults.threshold, (long)group.defaults.interval);
+        NSLog(@"Group id is %@, group name is %@, group owner is %@", group.defaults.groupId, group.defaults.groupName, group.defaults.owner);
+        for (NSString *address in group.defaults.servers.allKeys) {
+            NSLog(@"Untrusted server %@, access key is %@", address, group.defaults.servers[address]);
+        }
+    }
+    
+    // Indicate to the system that your app wishes to perform background fetch.
+    [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:1800];
+
+    // Use storyboard by init state.
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:grouper.group.defaults.initial != InitialFinished ? @"Init" : @"Main"
+                                                         bundle:nil];
+    // Set root view controller and make windows visible
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = [storyboard instantiateInitialViewController];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
-
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
-}
-
-
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    if(DEBUG) {
+        NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
+    }
 }
-
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-}
-
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    if(DEBUG) {
+        NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
+    }
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    if(DEBUG) {
+        NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
+    }
+    NSString *token = [[[[deviceToken description]
+                            stringByReplacingOccurrencesOfString:@"<" withString:@""]
+                            stringByReplacingOccurrencesOfString:@">" withString:@""]
+                            stringByReplacingOccurrencesOfString:@" " withString:@""];
+    if (DEBUG) {
+        NSLog(@"Device token from APNs server is %@", token);
+    }
+    [grouper.group sendDeviceToken:token];
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    if(DEBUG) {
+        NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
+        NSLog(@"Register remote notification failed with error: %@", error.localizedDescription);
+    }
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    if(DEBUG) {
+        NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
+        NSLog(@"didReceiveRemoteNotification, userInfo = %@", userInfo);
+    }
+    NSDictionary *aps = [userInfo valueForKey:@"aps"];
+    NSString *category = [aps valueForKey:@"category"];
+    if ([category isEqualToString:@"message"]) {
+        [self sync];
+        [BannerTool showWithTitle:nil
+                         subtitle:[aps valueForKey:@"alert"]
+                            image:nil];
+    }
+}
+
+// Background fetch.
+- (void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    if(DEBUG) {
+        NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
+        NSLog(@"Background fetch started...");
+    }
+    [self sync];
 }
 
 
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+#pragma mark - DataStack
+@synthesize dataStack = _dataStack;
+
+- (DataStack *)dataStack {
+    if (_dataStack) {
+        return _dataStack;
+    }
+    _dataStack = [[DataStack alloc] initWithModelName:@"Model"];
+    return _dataStack;
 }
 
+#pragma mark - Service
+- (void)setRootViewControllerWithIdentifer:(NSString *)identifer {
+    if(DEBUG) {
+        NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
+    }
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:identifer];
+    [self.window makeKeyAndVisible];
+}
+
+- (void)sync {
+    if(DEBUG) {
+        NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
+    }
+    [grouper.group checkServerState:^(NSDictionary *serverStates, BOOL sync) {
+        if (sync) {
+            [grouper.receiver receiveWithCompletion:^{
+                if (DEBUG) {
+                    NSLog(@"Sync ended...");
+                }
+            }];
+        }
+    }];
+}
 
 @end
