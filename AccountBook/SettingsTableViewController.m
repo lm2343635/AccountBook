@@ -87,8 +87,10 @@
         return;
     }
     if ([cell.reuseIdentifier isEqualToString:@"members"]) {
-        UIStoryboard *storyborad = [UIStoryboard storyboardWithName:@"Members" bundle:nil];
-        [self presentViewController:[storyborad instantiateInitialViewController] animated:true completion:nil];
+        NSBundle *podBundle = [NSBundle bundleForClass:Grouper.self];
+        NSBundle *bundle = [NSBundle bundleWithURL:[podBundle URLForResource:@"Grouper" withExtension:@"bundle"]];
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Members" bundle:bundle];
+        [self presentViewController:[storyboard instantiateInitialViewController] animated:true completion:nil];
     } else if ([cell.reuseIdentifier isEqualToString:@"clear"]) {
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Clear Share ID Cache"
                                                                    message:nil

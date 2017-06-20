@@ -1,9 +1,9 @@
 //
-//  ContentViewController.swift
-//  GroupFinance
+//  JSONFormatter.swift
+//  AccountBook
 //
-//  Created by 李大爷的电脑 on 23/01/2017.
-//  Copyright © 2017 limeng. All rights reserved.
+//  Created by lidaye on 20/06/2017.
+//  Copyright © 2017 Softlab. All rights reserved.
 //
 
 import UIKit
@@ -17,39 +17,15 @@ enum PrettyColor: Int {
 
 let symbols = ["{", "}", "[", "]", ":", ","]
 
-class ContentViewController: UIViewController {
-
-    var message: MessageData!
-    let prettyLabel = M80AttributedLabel()
+@objc class JSONFormatter: NSObject {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    class func prettyViewIn(_ parentView: UIView, message: String) -> UIScrollView {
+        let prettyLabel = M80AttributedLabel()
         
-        self.title = message.object
-        
-        formatJSON()
-        let width = self.view.frame.size.width
-        let height = self.view.frame.size.height
-        //Set pretty scroll view
-        let prettySize = prettyLabel.sizeThatFits(CGSize.init(width: width - 10, height: CGFloat.greatestFiniteMagnitude))
-        prettyLabel.frame = CGRect.init(x: 5, y: 5, width: prettySize.width, height: prettySize.height)
-        prettyLabel.backgroundColor = UIColor.clear
-        let prettyScrollView: UIScrollView = {
-            let view = UIScrollView(frame: CGRect(x: 0, y: 0, width: width, height: height - 50))
-            view.contentSize = CGSize.init(width: width, height: prettySize.height + 70)
-            view.backgroundColor = RGB(0xf2f2f2)
-            view.addSubview(prettyLabel)
-            return view
-        }()
-        
-        self.view.addSubview(prettyScrollView)
-    }
-
-    func formatJSON() {
         var space = String()
         var color = RGB(PrettyColor.normal.rawValue)
         var isText = false
-        for char in message.content.characters {
+        for char in message.characters {
             let text: String
             switch char {
             case "\"":
@@ -83,14 +59,31 @@ class ContentViewController: UIViewController {
             let attributedText = NSMutableAttributedString(string: text)
             attributedText.m80_setTextColor(symbols.contains("\(char)") ? RGB(PrettyColor.normal.rawValue) : color)
             attributedText.m80_setFont(UIFont(name: "Menlo", size: 12)!)
-            self.prettyLabel.appendAttributedText(attributedText)
+            prettyLabel.appendAttributedText(attributedText)
         }
-    }
 
-    func RGB(_ value : Int) -> UIColor {
+        let width = parentView.frame.size.width
+        let height = parentView.frame.size.height
+        //Set pretty scroll view
+        let prettySize = prettyLabel.sizeThatFits(CGSize.init(width: width - 10, height: CGFloat.greatestFiniteMagnitude))
+        prettyLabel.frame = CGRect.init(x: 5, y: 5, width: prettySize.width, height: prettySize.height)
+        prettyLabel.backgroundColor = UIColor.clear
+        let prettyScrollView: UIScrollView = {
+            let view = UIScrollView(frame: CGRect(x: 0, y: 0, width: width, height: height - 50))
+            view.contentSize = CGSize.init(width: width, height: prettySize.height + 70)
+            view.backgroundColor = RGB(0xf2f2f2)
+            view.addSubview(prettyLabel)
+            return view
+        }()
+        return prettyScrollView
+    }
+    
+    class func RGB(_ value : Int) -> UIColor {
         let r = CGFloat((value & 0xFF0000) >> 16) / 255.0
         let g = CGFloat((value & 0x00FF00) >> 8 ) / 255.0
         let b = CGFloat((value & 0x0000FF)      ) / 255.0
         return UIColor(red: r, green: g, blue: b, alpha: 1.0)
     }
+    
 }
+

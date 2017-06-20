@@ -10,7 +10,7 @@
 #import "DaoManager.h"
 #import "CommonTool.h"
 #import "MessageData.h"
-#import "Grouper-Swift.h"
+//#import "AccountBook-Swift.h"
 #import "UIImageView+Extension.h"
 #import <MJRefresh/MJRefresh.h>
 #import "Grouper.h"
@@ -112,6 +112,9 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (DEBUG) {
+        NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
+    }
     return 70;
 }
 

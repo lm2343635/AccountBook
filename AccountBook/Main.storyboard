@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -595,7 +594,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="init_join" translatesAutoresizingMaskIntoConstraints="NO" id="We8-dT-VBE">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="setting_members" translatesAutoresizingMaskIntoConstraints="NO" id="We8-dT-VBE">
                                                     <rect key="frame" x="18" y="11" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -1376,7 +1375,7 @@
             </objects>
             <point key="canvasLocation" x="1871" y="-1777"/>
         </scene>
-        <!--Grouper-->
+        <!--Account Book-->
         <scene sceneID="SdT-tF-Whz">
             <objects>
                 <tableViewController id="F4E-UZ-YzA" customClass="MainTableViewController" sceneMemberID="viewController">
@@ -1492,7 +1491,7 @@
                             <outlet property="delegate" destination="F4E-UZ-YzA" id="kPE-gW-DAC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Grouper" id="Mer-07-VvD"/>
+                    <navigationItem key="navigationItem" title="Account Book" id="Mer-07-VvD"/>
                     <connections>
                         <segue destination="Ns7-vH-OWF" kind="push" identifier="contentSegue" id="XQV-Hc-gMs"/>
                     </connections>
@@ -1504,7 +1503,7 @@
         <!--Content View Controller-->
         <scene sceneID="Hy4-bt-Wfv">
             <objects>
-                <viewController id="Ns7-vH-OWF" customClass="ContentViewController" customModule="Grouper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ns7-vH-OWF" customClass="ContentViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e7k-61-0PP"/>
                         <viewControllerLayoutGuide type="bottom" id="123-Kx-3XO"/>
@@ -2199,13 +2198,13 @@
         <image name="arrow" width="30" height="30"/>
         <image name="close_record_photo" width="23" height="22"/>
         <image name="date_today" width="32" height="32"/>
-        <image name="init_join" width="30" height="30"/>
         <image name="server_access" width="30" height="30"/>
         <image name="server_not_access" width="30" height="30"/>
         <image name="setting_account" width="30" height="30"/>
         <image name="setting_classification" width="30" height="30"/>
         <image name="setting_clear" width="30" height="30"/>
         <image name="setting_confirm" width="30" height="30"/>
+        <image name="setting_members" width="30" height="30"/>
         <image name="setting_servers" width="30" height="30"/>
         <image name="setting_shop" width="30" height="30"/>
         <image name="setting_template" width="30" height="30"/>

@@ -7,8 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "Grouper-Bridging-Header.h"
-#import "Grouper-Swift.h"
+#import "AccountBook-Bridging-Header.h"
 #import "Grouper.h"
 
 @interface AppDelegate ()
@@ -44,8 +43,14 @@
     [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:1800];
 
     // Use storyboard by init state.
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:grouper.group.defaults.initial != InitialFinished ? @"Init" : @"Main"
-                                                         bundle:nil];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    if (grouper.group.defaults.initial != InitialFinished) {
+        NSBundle *podBundle = [NSBundle bundleForClass:Grouper.self];
+        
+        NSBundle *bundle = [NSBundle bundleWithURL:[podBundle URLForResource:@"Grouper" withExtension:@"bundle"]];
+        storyboard = [UIStoryboard storyboardWithName:@"Init" bundle:bundle];
+    }
+
     // Set root view controller and make windows visible
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = [storyboard instantiateInitialViewController];
@@ -96,9 +101,9 @@
     NSString *category = [aps valueForKey:@"category"];
     if ([category isEqualToString:@"message"]) {
         [self sync];
-        [BannerTool showWithTitle:nil
-                         subtitle:[aps valueForKey:@"alert"]
-                            image:nil];
+//        [BannerTool showWithTitle:nil
+//                         subtitle:[aps valueForKey:@"alert"]
+//                            image:nil];
     }
 }
 

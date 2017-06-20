@@ -7,14 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CB1E1628A8858D0FBEF693B /* Pods_AccountBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 796D66ED6E04B1E19DDCD329 /* Pods_AccountBook.framework */; };
+		E4892D5E1EF9055000E9876C /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4892D5D1EF9055000E9876C /* ContentViewController.m */; };
+		E4892D601EF9060C00E9876C /* JSONFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4892D5F1EF9060C00E9876C /* JSONFormatter.swift */; };
 		E4D0A4E31EF7EEAD0021BFBF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A4E21EF7EEAD0021BFBF /* main.m */; };
-		E4D0A4E61EF7EEAD0021BFBF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A4E51EF7EEAD0021BFBF /* AppDelegate.m */; };
-		E4D0A4E91EF7EEAD0021BFBF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A4E81EF7EEAD0021BFBF /* ViewController.m */; };
-		E4D0A4EC1EF7EEAD0021BFBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D0A4EA1EF7EEAD0021BFBF /* Main.storyboard */; };
-		E4D0A4EE1EF7EEAD0021BFBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4D0A4ED1EF7EEAD0021BFBF /* Assets.xcassets */; };
-		E4D0A4F11EF7EEAD0021BFBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D0A4EF1EF7EEAD0021BFBF /* LaunchScreen.storyboard */; };
 		E4D0A4FC1EF7EEAD0021BFBF /* AccountBookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A4FB1EF7EEAD0021BFBF /* AccountBookTests.m */; };
 		E4D0A5071EF7EEAD0021BFBF /* AccountBookUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5061EF7EEAD0021BFBF /* AccountBookUITests.m */; };
+		E4D0A52E1EF7EECE0021BFBF /* Model.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5151EF7EECE0021BFBF /* Model.xcdatamodel */; };
+		E4D0A52F1EF7EECE0021BFBF /* Account+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5171EF7EECE0021BFBF /* Account+CoreDataClass.m */; };
+		E4D0A5301EF7EECE0021BFBF /* Account+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5191EF7EECE0021BFBF /* Account+CoreDataProperties.m */; };
+		E4D0A5311EF7EECE0021BFBF /* Classification+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A51B1EF7EECE0021BFBF /* Classification+CoreDataClass.m */; };
+		E4D0A5321EF7EECE0021BFBF /* Classification+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A51D1EF7EECE0021BFBF /* Classification+CoreDataProperties.m */; };
+		E4D0A5331EF7EECE0021BFBF /* Photo+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A51F1EF7EECE0021BFBF /* Photo+CoreDataClass.m */; };
+		E4D0A5341EF7EECE0021BFBF /* Photo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5211EF7EECE0021BFBF /* Photo+CoreDataProperties.m */; };
+		E4D0A5351EF7EECE0021BFBF /* Record+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5231EF7EECE0021BFBF /* Record+CoreDataClass.m */; };
+		E4D0A5361EF7EECE0021BFBF /* Record+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5251EF7EECE0021BFBF /* Record+CoreDataProperties.m */; };
+		E4D0A5371EF7EECE0021BFBF /* Shop+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5271EF7EECE0021BFBF /* Shop+CoreDataClass.m */; };
+		E4D0A5381EF7EECE0021BFBF /* Shop+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5291EF7EECE0021BFBF /* Shop+CoreDataProperties.m */; };
+		E4D0A5391EF7EECE0021BFBF /* Template+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A52B1EF7EECE0021BFBF /* Template+CoreDataClass.m */; };
+		E4D0A53A1EF7EECE0021BFBF /* Template+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A52D1EF7EECE0021BFBF /* Template+CoreDataProperties.m */; };
+		E4D0A5501EF7EF000021BFBF /* AccountDao.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5411EF7EF000021BFBF /* AccountDao.m */; };
+		E4D0A5511EF7EF000021BFBF /* ClassificationDao.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5431EF7EF000021BFBF /* ClassificationDao.m */; };
+		E4D0A5521EF7EF000021BFBF /* DaoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5451EF7EF000021BFBF /* DaoManager.m */; };
+		E4D0A5531EF7EF000021BFBF /* DaoTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5471EF7EF000021BFBF /* DaoTemplate.m */; };
+		E4D0A5541EF7EF000021BFBF /* PhotoDao.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5491EF7EF000021BFBF /* PhotoDao.m */; };
+		E4D0A5551EF7EF000021BFBF /* RecordDao.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A54B1EF7EF000021BFBF /* RecordDao.m */; };
+		E4D0A5561EF7EF000021BFBF /* ShopDao.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A54D1EF7EF000021BFBF /* ShopDao.m */; };
+		E4D0A5571EF7EF000021BFBF /* TemplateDao.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A54F1EF7EF000021BFBF /* TemplateDao.m */; };
+		E4D0A55F1EF7EF0E0021BFBF /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A55B1EF7EF0E0021BFBF /* MainTableViewController.m */; };
+		E4D0A5601EF7EF0E0021BFBF /* MessagesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A55D1EF7EF0E0021BFBF /* MessagesTableViewController.m */; };
+		E4D0A56B1EF7EF1C0021BFBF /* AddRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5621EF7EF1C0021BFBF /* AddRecordViewController.m */; };
+		E4D0A56C1EF7EF1C0021BFBF /* RecordsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5641EF7EF1C0021BFBF /* RecordsTableViewController.m */; };
+		E4D0A56D1EF7EF1C0021BFBF /* SelectRecordItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5661EF7EF1C0021BFBF /* SelectRecordItemTableViewController.m */; };
+		E4D0A56E1EF7EF1C0021BFBF /* EditRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5681EF7EF1C0021BFBF /* EditRecordViewController.m */; };
+		E4D0A56F1EF7EF1C0021BFBF /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A56A1EF7EF1C0021BFBF /* PhotoViewController.m */; };
+		E4D0A58C1EF7EF240021BFBF /* AccountsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5711EF7EF240021BFBF /* AccountsTableViewController.m */; };
+		E4D0A58D1EF7EF240021BFBF /* AddAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5731EF7EF240021BFBF /* AddAccountViewController.m */; };
+		E4D0A58E1EF7EF240021BFBF /* AddClassificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5751EF7EF240021BFBF /* AddClassificationViewController.m */; };
+		E4D0A58F1EF7EF240021BFBF /* AddShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5771EF7EF240021BFBF /* AddShopViewController.m */; };
+		E4D0A5901EF7EF240021BFBF /* AddTemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5791EF7EF240021BFBF /* AddTemplateViewController.m */; };
+		E4D0A5911EF7EF240021BFBF /* ClassificationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A57B1EF7EF240021BFBF /* ClassificationsTableViewController.m */; };
+		E4D0A5921EF7EF240021BFBF /* EditAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A57D1EF7EF240021BFBF /* EditAccountViewController.m */; };
+		E4D0A5931EF7EF240021BFBF /* EditClassificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A57F1EF7EF240021BFBF /* EditClassificationViewController.m */; };
+		E4D0A5941EF7EF240021BFBF /* EditShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5811EF7EF240021BFBF /* EditShopViewController.m */; };
+		E4D0A5951EF7EF240021BFBF /* MyProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5831EF7EF240021BFBF /* MyProfileTableViewController.m */; };
+		E4D0A5961EF7EF240021BFBF /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5851EF7EF240021BFBF /* SettingsTableViewController.m */; };
+		E4D0A5971EF7EF240021BFBF /* ShopsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5871EF7EF240021BFBF /* ShopsTableViewController.m */; };
+		E4D0A5981EF7EF240021BFBF /* SynchronizationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5891EF7EF240021BFBF /* SynchronizationTableViewController.m */; };
+		E4D0A5991EF7EF240021BFBF /* TemplatesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A58B1EF7EF240021BFBF /* TemplatesTableViewController.m */; };
+		E4D0A59E1EF7EF2D0021BFBF /* DateSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A59B1EF7EF2D0021BFBF /* DateSelectorView.m */; };
+		E4D0A59F1EF7EF2D0021BFBF /* DateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A59D1EF7EF2D0021BFBF /* DateTool.m */; };
+		E4D0A5A51EF7EF390021BFBF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A5A11EF7EF390021BFBF /* AppDelegate.m */; };
+		E4D0A5A61EF7EF390021BFBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D0A5A21EF7EF390021BFBF /* Main.storyboard */; };
+		E4D0A5A71EF7EF390021BFBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4D0A5A31EF7EF390021BFBF /* Assets.xcassets */; };
+		E4D0A5A81EF7EF390021BFBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D0A5A41EF7EF390021BFBF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,15 +81,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4494CA4001D843E20FC25A4D /* Pods-AccountBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccountBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-AccountBook/Pods-AccountBook.release.xcconfig"; sourceTree = "<group>"; };
+		73DE2C552FB5CE72F7D22C33 /* Pods-AccountBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccountBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AccountBook/Pods-AccountBook.debug.xcconfig"; sourceTree = "<group>"; };
+		796D66ED6E04B1E19DDCD329 /* Pods_AccountBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AccountBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4892D5C1EF9055000E9876C /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
+		E4892D5D1EF9055000E9876C /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
+		E4892D5F1EF9060C00E9876C /* JSONFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFormatter.swift; sourceTree = "<group>"; };
 		E4D0A4DE1EF7EEAD0021BFBF /* AccountBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccountBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D0A4E21EF7EEAD0021BFBF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E4D0A4E41EF7EEAD0021BFBF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E4D0A4E51EF7EEAD0021BFBF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E4D0A4E71EF7EEAD0021BFBF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E4D0A4E81EF7EEAD0021BFBF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E4D0A4EB1EF7EEAD0021BFBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E4D0A4ED1EF7EEAD0021BFBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E4D0A4F01EF7EEAD0021BFBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4D0A4F21EF7EEAD0021BFBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4D0A4F71EF7EEAD0021BFBF /* AccountBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccountBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D0A4FB1EF7EEAD0021BFBF /* AccountBookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountBookTests.m; sourceTree = "<group>"; };
@@ -51,6 +96,100 @@
 		E4D0A5021EF7EEAD0021BFBF /* AccountBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccountBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D0A5061EF7EEAD0021BFBF /* AccountBookUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountBookUITests.m; sourceTree = "<group>"; };
 		E4D0A5081EF7EEAD0021BFBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4D0A5151EF7EECE0021BFBF /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		E4D0A5161EF7EECE0021BFBF /* Account+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Account+CoreDataClass.h"; sourceTree = "<group>"; };
+		E4D0A5171EF7EECE0021BFBF /* Account+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Account+CoreDataClass.m"; sourceTree = "<group>"; };
+		E4D0A5181EF7EECE0021BFBF /* Account+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Account+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E4D0A5191EF7EECE0021BFBF /* Account+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Account+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E4D0A51A1EF7EECE0021BFBF /* Classification+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Classification+CoreDataClass.h"; sourceTree = "<group>"; };
+		E4D0A51B1EF7EECE0021BFBF /* Classification+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Classification+CoreDataClass.m"; sourceTree = "<group>"; };
+		E4D0A51C1EF7EECE0021BFBF /* Classification+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Classification+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E4D0A51D1EF7EECE0021BFBF /* Classification+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Classification+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E4D0A51E1EF7EECE0021BFBF /* Photo+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Photo+CoreDataClass.h"; sourceTree = "<group>"; };
+		E4D0A51F1EF7EECE0021BFBF /* Photo+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Photo+CoreDataClass.m"; sourceTree = "<group>"; };
+		E4D0A5201EF7EECE0021BFBF /* Photo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Photo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E4D0A5211EF7EECE0021BFBF /* Photo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Photo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E4D0A5221EF7EECE0021BFBF /* Record+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Record+CoreDataClass.h"; sourceTree = "<group>"; };
+		E4D0A5231EF7EECE0021BFBF /* Record+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Record+CoreDataClass.m"; sourceTree = "<group>"; };
+		E4D0A5241EF7EECE0021BFBF /* Record+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Record+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E4D0A5251EF7EECE0021BFBF /* Record+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Record+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E4D0A5261EF7EECE0021BFBF /* Shop+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Shop+CoreDataClass.h"; sourceTree = "<group>"; };
+		E4D0A5271EF7EECE0021BFBF /* Shop+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Shop+CoreDataClass.m"; sourceTree = "<group>"; };
+		E4D0A5281EF7EECE0021BFBF /* Shop+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Shop+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E4D0A5291EF7EECE0021BFBF /* Shop+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Shop+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E4D0A52A1EF7EECE0021BFBF /* Template+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Template+CoreDataClass.h"; sourceTree = "<group>"; };
+		E4D0A52B1EF7EECE0021BFBF /* Template+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Template+CoreDataClass.m"; sourceTree = "<group>"; };
+		E4D0A52C1EF7EECE0021BFBF /* Template+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Template+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E4D0A52D1EF7EECE0021BFBF /* Template+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Template+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E4D0A5401EF7EF000021BFBF /* AccountDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountDao.h; sourceTree = "<group>"; };
+		E4D0A5411EF7EF000021BFBF /* AccountDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountDao.m; sourceTree = "<group>"; };
+		E4D0A5421EF7EF000021BFBF /* ClassificationDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassificationDao.h; sourceTree = "<group>"; };
+		E4D0A5431EF7EF000021BFBF /* ClassificationDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassificationDao.m; sourceTree = "<group>"; };
+		E4D0A5441EF7EF000021BFBF /* DaoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaoManager.h; sourceTree = "<group>"; };
+		E4D0A5451EF7EF000021BFBF /* DaoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaoManager.m; sourceTree = "<group>"; };
+		E4D0A5461EF7EF000021BFBF /* DaoTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaoTemplate.h; sourceTree = "<group>"; };
+		E4D0A5471EF7EF000021BFBF /* DaoTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaoTemplate.m; sourceTree = "<group>"; };
+		E4D0A5481EF7EF000021BFBF /* PhotoDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDao.h; sourceTree = "<group>"; };
+		E4D0A5491EF7EF000021BFBF /* PhotoDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDao.m; sourceTree = "<group>"; };
+		E4D0A54A1EF7EF000021BFBF /* RecordDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordDao.h; sourceTree = "<group>"; };
+		E4D0A54B1EF7EF000021BFBF /* RecordDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordDao.m; sourceTree = "<group>"; };
+		E4D0A54C1EF7EF000021BFBF /* ShopDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopDao.h; sourceTree = "<group>"; };
+		E4D0A54D1EF7EF000021BFBF /* ShopDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopDao.m; sourceTree = "<group>"; };
+		E4D0A54E1EF7EF000021BFBF /* TemplateDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateDao.h; sourceTree = "<group>"; };
+		E4D0A54F1EF7EF000021BFBF /* TemplateDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateDao.m; sourceTree = "<group>"; };
+		E4D0A5581EF7EF0E0021BFBF /* AccountBook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AccountBook-Bridging-Header.h"; sourceTree = "<group>"; };
+		E4D0A55A1EF7EF0E0021BFBF /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
+		E4D0A55B1EF7EF0E0021BFBF /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
+		E4D0A55C1EF7EF0E0021BFBF /* MessagesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesTableViewController.h; sourceTree = "<group>"; };
+		E4D0A55D1EF7EF0E0021BFBF /* MessagesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesTableViewController.m; sourceTree = "<group>"; };
+		E4D0A5611EF7EF1C0021BFBF /* AddRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRecordViewController.h; sourceTree = "<group>"; };
+		E4D0A5621EF7EF1C0021BFBF /* AddRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRecordViewController.m; sourceTree = "<group>"; };
+		E4D0A5631EF7EF1C0021BFBF /* RecordsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordsTableViewController.h; sourceTree = "<group>"; };
+		E4D0A5641EF7EF1C0021BFBF /* RecordsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordsTableViewController.m; sourceTree = "<group>"; };
+		E4D0A5651EF7EF1C0021BFBF /* SelectRecordItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectRecordItemTableViewController.h; sourceTree = "<group>"; };
+		E4D0A5661EF7EF1C0021BFBF /* SelectRecordItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectRecordItemTableViewController.m; sourceTree = "<group>"; };
+		E4D0A5671EF7EF1C0021BFBF /* EditRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditRecordViewController.h; sourceTree = "<group>"; };
+		E4D0A5681EF7EF1C0021BFBF /* EditRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditRecordViewController.m; sourceTree = "<group>"; };
+		E4D0A5691EF7EF1C0021BFBF /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		E4D0A56A1EF7EF1C0021BFBF /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		E4D0A5701EF7EF240021BFBF /* AccountsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountsTableViewController.h; sourceTree = "<group>"; };
+		E4D0A5711EF7EF240021BFBF /* AccountsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountsTableViewController.m; sourceTree = "<group>"; };
+		E4D0A5721EF7EF240021BFBF /* AddAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAccountViewController.h; sourceTree = "<group>"; };
+		E4D0A5731EF7EF240021BFBF /* AddAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAccountViewController.m; sourceTree = "<group>"; };
+		E4D0A5741EF7EF240021BFBF /* AddClassificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddClassificationViewController.h; sourceTree = "<group>"; };
+		E4D0A5751EF7EF240021BFBF /* AddClassificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddClassificationViewController.m; sourceTree = "<group>"; };
+		E4D0A5761EF7EF240021BFBF /* AddShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddShopViewController.h; sourceTree = "<group>"; };
+		E4D0A5771EF7EF240021BFBF /* AddShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddShopViewController.m; sourceTree = "<group>"; };
+		E4D0A5781EF7EF240021BFBF /* AddTemplateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTemplateViewController.h; sourceTree = "<group>"; };
+		E4D0A5791EF7EF240021BFBF /* AddTemplateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTemplateViewController.m; sourceTree = "<group>"; };
+		E4D0A57A1EF7EF240021BFBF /* ClassificationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassificationsTableViewController.h; sourceTree = "<group>"; };
+		E4D0A57B1EF7EF240021BFBF /* ClassificationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassificationsTableViewController.m; sourceTree = "<group>"; };
+		E4D0A57C1EF7EF240021BFBF /* EditAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditAccountViewController.h; sourceTree = "<group>"; };
+		E4D0A57D1EF7EF240021BFBF /* EditAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditAccountViewController.m; sourceTree = "<group>"; };
+		E4D0A57E1EF7EF240021BFBF /* EditClassificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditClassificationViewController.h; sourceTree = "<group>"; };
+		E4D0A57F1EF7EF240021BFBF /* EditClassificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditClassificationViewController.m; sourceTree = "<group>"; };
+		E4D0A5801EF7EF240021BFBF /* EditShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditShopViewController.h; sourceTree = "<group>"; };
+		E4D0A5811EF7EF240021BFBF /* EditShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditShopViewController.m; sourceTree = "<group>"; };
+		E4D0A5821EF7EF240021BFBF /* MyProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileTableViewController.h; sourceTree = "<group>"; };
+		E4D0A5831EF7EF240021BFBF /* MyProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileTableViewController.m; sourceTree = "<group>"; };
+		E4D0A5841EF7EF240021BFBF /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
+		E4D0A5851EF7EF240021BFBF /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
+		E4D0A5861EF7EF240021BFBF /* ShopsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopsTableViewController.h; sourceTree = "<group>"; };
+		E4D0A5871EF7EF240021BFBF /* ShopsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopsTableViewController.m; sourceTree = "<group>"; };
+		E4D0A5881EF7EF240021BFBF /* SynchronizationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynchronizationTableViewController.h; sourceTree = "<group>"; };
+		E4D0A5891EF7EF240021BFBF /* SynchronizationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SynchronizationTableViewController.m; sourceTree = "<group>"; };
+		E4D0A58A1EF7EF240021BFBF /* TemplatesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplatesTableViewController.h; sourceTree = "<group>"; };
+		E4D0A58B1EF7EF240021BFBF /* TemplatesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplatesTableViewController.m; sourceTree = "<group>"; };
+		E4D0A59A1EF7EF2D0021BFBF /* DateSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateSelectorView.h; sourceTree = "<group>"; };
+		E4D0A59B1EF7EF2D0021BFBF /* DateSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateSelectorView.m; sourceTree = "<group>"; };
+		E4D0A59C1EF7EF2D0021BFBF /* DateTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateTool.h; sourceTree = "<group>"; };
+		E4D0A59D1EF7EF2D0021BFBF /* DateTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateTool.m; sourceTree = "<group>"; };
+		E4D0A5A01EF7EF390021BFBF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E4D0A5A11EF7EF390021BFBF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E4D0A5A21EF7EF390021BFBF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E4D0A5A31EF7EF390021BFBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E4D0A5A41EF7EF390021BFBF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E4D0A5B01EF7F9A80021BFBF /* AccountBook.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AccountBook.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +197,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CB1E1628A8858D0FBEF693B /* Pods_AccountBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +218,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		75CFA58D8727032303FC2E97 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				73DE2C552FB5CE72F7D22C33 /* Pods-AccountBook.debug.xcconfig */,
+				4494CA4001D843E20FC25A4D /* Pods-AccountBook.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E4D0A4D51EF7EEAD0021BFBF = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +234,8 @@
 				E4D0A4FA1EF7EEAD0021BFBF /* AccountBookTests */,
 				E4D0A5051EF7EEAD0021BFBF /* AccountBookUITests */,
 				E4D0A4DF1EF7EEAD0021BFBF /* Products */,
+				75CFA58D8727032303FC2E97 /* Pods */,
+				FC4E2A0CF9E72705A9935068 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,13 +252,18 @@
 		E4D0A4E01EF7EEAD0021BFBF /* AccountBook */ = {
 			isa = PBXGroup;
 			children = (
-				E4D0A4E41EF7EEAD0021BFBF /* AppDelegate.h */,
-				E4D0A4E51EF7EEAD0021BFBF /* AppDelegate.m */,
-				E4D0A4E71EF7EEAD0021BFBF /* ViewController.h */,
-				E4D0A4E81EF7EEAD0021BFBF /* ViewController.m */,
-				E4D0A4EA1EF7EEAD0021BFBF /* Main.storyboard */,
-				E4D0A4ED1EF7EEAD0021BFBF /* Assets.xcassets */,
-				E4D0A4EF1EF7EEAD0021BFBF /* LaunchScreen.storyboard */,
+				E4D0A5B01EF7F9A80021BFBF /* AccountBook.entitlements */,
+				E4D0A53F1EF7EEF10021BFBF /* Support */,
+				E4D0A53E1EF7EEEA0021BFBF /* Settings */,
+				E4D0A53D1EF7EEE40021BFBF /* Record */,
+				E4D0A53C1EF7EEDE0021BFBF /* Main */,
+				E4D0A53B1EF7EED90021BFBF /* Dao */,
+				E4D0A5141EF7EEC10021BFBF /* Model */,
+				E4D0A5A01EF7EF390021BFBF /* AppDelegate.h */,
+				E4D0A5A11EF7EF390021BFBF /* AppDelegate.m */,
+				E4D0A5A21EF7EF390021BFBF /* Main.storyboard */,
+				E4D0A5A31EF7EF390021BFBF /* Assets.xcassets */,
+				E4D0A5A41EF7EF390021BFBF /* LaunchScreen.storyboard */,
 				E4D0A4F21EF7EEAD0021BFBF /* Info.plist */,
 				E4D0A4E11EF7EEAD0021BFBF /* Supporting Files */,
 			);
@@ -117,6 +273,7 @@
 		E4D0A4E11EF7EEAD0021BFBF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E4D0A5581EF7EF0E0021BFBF /* AccountBook-Bridging-Header.h */,
 				E4D0A4E21EF7EEAD0021BFBF /* main.m */,
 			);
 			name = "Supporting Files";
@@ -140,6 +297,146 @@
 			path = AccountBookUITests;
 			sourceTree = "<group>";
 		};
+		E4D0A5141EF7EEC10021BFBF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E4D0A5151EF7EECE0021BFBF /* Model.xcdatamodel */,
+				E4D0A5161EF7EECE0021BFBF /* Account+CoreDataClass.h */,
+				E4D0A5171EF7EECE0021BFBF /* Account+CoreDataClass.m */,
+				E4D0A5181EF7EECE0021BFBF /* Account+CoreDataProperties.h */,
+				E4D0A5191EF7EECE0021BFBF /* Account+CoreDataProperties.m */,
+				E4D0A51A1EF7EECE0021BFBF /* Classification+CoreDataClass.h */,
+				E4D0A51B1EF7EECE0021BFBF /* Classification+CoreDataClass.m */,
+				E4D0A51C1EF7EECE0021BFBF /* Classification+CoreDataProperties.h */,
+				E4D0A51D1EF7EECE0021BFBF /* Classification+CoreDataProperties.m */,
+				E4D0A51E1EF7EECE0021BFBF /* Photo+CoreDataClass.h */,
+				E4D0A51F1EF7EECE0021BFBF /* Photo+CoreDataClass.m */,
+				E4D0A5201EF7EECE0021BFBF /* Photo+CoreDataProperties.h */,
+				E4D0A5211EF7EECE0021BFBF /* Photo+CoreDataProperties.m */,
+				E4D0A5221EF7EECE0021BFBF /* Record+CoreDataClass.h */,
+				E4D0A5231EF7EECE0021BFBF /* Record+CoreDataClass.m */,
+				E4D0A5241EF7EECE0021BFBF /* Record+CoreDataProperties.h */,
+				E4D0A5251EF7EECE0021BFBF /* Record+CoreDataProperties.m */,
+				E4D0A5261EF7EECE0021BFBF /* Shop+CoreDataClass.h */,
+				E4D0A5271EF7EECE0021BFBF /* Shop+CoreDataClass.m */,
+				E4D0A5281EF7EECE0021BFBF /* Shop+CoreDataProperties.h */,
+				E4D0A5291EF7EECE0021BFBF /* Shop+CoreDataProperties.m */,
+				E4D0A52A1EF7EECE0021BFBF /* Template+CoreDataClass.h */,
+				E4D0A52B1EF7EECE0021BFBF /* Template+CoreDataClass.m */,
+				E4D0A52C1EF7EECE0021BFBF /* Template+CoreDataProperties.h */,
+				E4D0A52D1EF7EECE0021BFBF /* Template+CoreDataProperties.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E4D0A53B1EF7EED90021BFBF /* Dao */ = {
+			isa = PBXGroup;
+			children = (
+				E4D0A5401EF7EF000021BFBF /* AccountDao.h */,
+				E4D0A5411EF7EF000021BFBF /* AccountDao.m */,
+				E4D0A5421EF7EF000021BFBF /* ClassificationDao.h */,
+				E4D0A5431EF7EF000021BFBF /* ClassificationDao.m */,
+				E4D0A5441EF7EF000021BFBF /* DaoManager.h */,
+				E4D0A5451EF7EF000021BFBF /* DaoManager.m */,
+				E4D0A5461EF7EF000021BFBF /* DaoTemplate.h */,
+				E4D0A5471EF7EF000021BFBF /* DaoTemplate.m */,
+				E4D0A5481EF7EF000021BFBF /* PhotoDao.h */,
+				E4D0A5491EF7EF000021BFBF /* PhotoDao.m */,
+				E4D0A54A1EF7EF000021BFBF /* RecordDao.h */,
+				E4D0A54B1EF7EF000021BFBF /* RecordDao.m */,
+				E4D0A54C1EF7EF000021BFBF /* ShopDao.h */,
+				E4D0A54D1EF7EF000021BFBF /* ShopDao.m */,
+				E4D0A54E1EF7EF000021BFBF /* TemplateDao.h */,
+				E4D0A54F1EF7EF000021BFBF /* TemplateDao.m */,
+			);
+			name = Dao;
+			sourceTree = "<group>";
+		};
+		E4D0A53C1EF7EEDE0021BFBF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E4892D5C1EF9055000E9876C /* ContentViewController.h */,
+				E4892D5D1EF9055000E9876C /* ContentViewController.m */,
+				E4D0A55A1EF7EF0E0021BFBF /* MainTableViewController.h */,
+				E4D0A55B1EF7EF0E0021BFBF /* MainTableViewController.m */,
+				E4D0A55C1EF7EF0E0021BFBF /* MessagesTableViewController.h */,
+				E4D0A55D1EF7EF0E0021BFBF /* MessagesTableViewController.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		E4D0A53D1EF7EEE40021BFBF /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				E4D0A5611EF7EF1C0021BFBF /* AddRecordViewController.h */,
+				E4D0A5621EF7EF1C0021BFBF /* AddRecordViewController.m */,
+				E4D0A5631EF7EF1C0021BFBF /* RecordsTableViewController.h */,
+				E4D0A5641EF7EF1C0021BFBF /* RecordsTableViewController.m */,
+				E4D0A5651EF7EF1C0021BFBF /* SelectRecordItemTableViewController.h */,
+				E4D0A5661EF7EF1C0021BFBF /* SelectRecordItemTableViewController.m */,
+				E4D0A5671EF7EF1C0021BFBF /* EditRecordViewController.h */,
+				E4D0A5681EF7EF1C0021BFBF /* EditRecordViewController.m */,
+				E4D0A5691EF7EF1C0021BFBF /* PhotoViewController.h */,
+				E4D0A56A1EF7EF1C0021BFBF /* PhotoViewController.m */,
+			);
+			name = Record;
+			sourceTree = "<group>";
+		};
+		E4D0A53E1EF7EEEA0021BFBF /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E4D0A5701EF7EF240021BFBF /* AccountsTableViewController.h */,
+				E4D0A5711EF7EF240021BFBF /* AccountsTableViewController.m */,
+				E4D0A5721EF7EF240021BFBF /* AddAccountViewController.h */,
+				E4D0A5731EF7EF240021BFBF /* AddAccountViewController.m */,
+				E4D0A5741EF7EF240021BFBF /* AddClassificationViewController.h */,
+				E4D0A5751EF7EF240021BFBF /* AddClassificationViewController.m */,
+				E4D0A5761EF7EF240021BFBF /* AddShopViewController.h */,
+				E4D0A5771EF7EF240021BFBF /* AddShopViewController.m */,
+				E4D0A5781EF7EF240021BFBF /* AddTemplateViewController.h */,
+				E4D0A5791EF7EF240021BFBF /* AddTemplateViewController.m */,
+				E4D0A57A1EF7EF240021BFBF /* ClassificationsTableViewController.h */,
+				E4D0A57B1EF7EF240021BFBF /* ClassificationsTableViewController.m */,
+				E4D0A57C1EF7EF240021BFBF /* EditAccountViewController.h */,
+				E4D0A57D1EF7EF240021BFBF /* EditAccountViewController.m */,
+				E4D0A57E1EF7EF240021BFBF /* EditClassificationViewController.h */,
+				E4D0A57F1EF7EF240021BFBF /* EditClassificationViewController.m */,
+				E4D0A5801EF7EF240021BFBF /* EditShopViewController.h */,
+				E4D0A5811EF7EF240021BFBF /* EditShopViewController.m */,
+				E4D0A5821EF7EF240021BFBF /* MyProfileTableViewController.h */,
+				E4D0A5831EF7EF240021BFBF /* MyProfileTableViewController.m */,
+				E4D0A5841EF7EF240021BFBF /* SettingsTableViewController.h */,
+				E4D0A5851EF7EF240021BFBF /* SettingsTableViewController.m */,
+				E4D0A5861EF7EF240021BFBF /* ShopsTableViewController.h */,
+				E4D0A5871EF7EF240021BFBF /* ShopsTableViewController.m */,
+				E4D0A5881EF7EF240021BFBF /* SynchronizationTableViewController.h */,
+				E4D0A5891EF7EF240021BFBF /* SynchronizationTableViewController.m */,
+				E4D0A58A1EF7EF240021BFBF /* TemplatesTableViewController.h */,
+				E4D0A58B1EF7EF240021BFBF /* TemplatesTableViewController.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		E4D0A53F1EF7EEF10021BFBF /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				E4D0A59A1EF7EF2D0021BFBF /* DateSelectorView.h */,
+				E4D0A59B1EF7EF2D0021BFBF /* DateSelectorView.m */,
+				E4D0A59C1EF7EF2D0021BFBF /* DateTool.h */,
+				E4D0A59D1EF7EF2D0021BFBF /* DateTool.m */,
+				E4892D5F1EF9060C00E9876C /* JSONFormatter.swift */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		FC4E2A0CF9E72705A9935068 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				796D66ED6E04B1E19DDCD329 /* Pods_AccountBook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +444,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4D0A50B1EF7EEAD0021BFBF /* Build configuration list for PBXNativeTarget "AccountBook" */;
 			buildPhases = (
+				7B9DEB70B8EFAB8F09A22FED /* [CP] Check Pods Manifest.lock */,
 				E4D0A4DA1EF7EEAD0021BFBF /* Sources */,
 				E4D0A4DB1EF7EEAD0021BFBF /* Frameworks */,
 				E4D0A4DC1EF7EEAD0021BFBF /* Resources */,
+				64E522091EF344F9DFA40F53 /* [CP] Embed Pods Frameworks */,
+				09524F9D4B5E7AF22358CA86 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -208,7 +508,16 @@
 					E4D0A4DD1EF7EEAD0021BFBF = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 6ANM44X2CJ;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					E4D0A4F61EF7EEAD0021BFBF = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -249,9 +558,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4D0A4F11EF7EEAD0021BFBF /* LaunchScreen.storyboard in Resources */,
-				E4D0A4EE1EF7EEAD0021BFBF /* Assets.xcassets in Resources */,
-				E4D0A4EC1EF7EEAD0021BFBF /* Main.storyboard in Resources */,
+				E4D0A5A81EF7EF390021BFBF /* LaunchScreen.storyboard in Resources */,
+				E4D0A5A71EF7EF390021BFBF /* Assets.xcassets in Resources */,
+				E4D0A5A61EF7EF390021BFBF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,14 +580,107 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09524F9D4B5E7AF22358CA86 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AccountBook/Pods-AccountBook-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64E522091EF344F9DFA40F53 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AccountBook/Pods-AccountBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B9DEB70B8EFAB8F09A22FED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E4D0A4DA1EF7EEAD0021BFBF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4D0A4E91EF7EEAD0021BFBF /* ViewController.m in Sources */,
-				E4D0A4E61EF7EEAD0021BFBF /* AppDelegate.m in Sources */,
+				E4D0A5601EF7EF0E0021BFBF /* MessagesTableViewController.m in Sources */,
+				E4D0A5501EF7EF000021BFBF /* AccountDao.m in Sources */,
 				E4D0A4E31EF7EEAD0021BFBF /* main.m in Sources */,
+				E4D0A59F1EF7EF2D0021BFBF /* DateTool.m in Sources */,
+				E4D0A5561EF7EF000021BFBF /* ShopDao.m in Sources */,
+				E4D0A58E1EF7EF240021BFBF /* AddClassificationViewController.m in Sources */,
+				E4892D601EF9060C00E9876C /* JSONFormatter.swift in Sources */,
+				E4D0A5321EF7EECE0021BFBF /* Classification+CoreDataProperties.m in Sources */,
+				E4D0A5901EF7EF240021BFBF /* AddTemplateViewController.m in Sources */,
+				E4D0A5341EF7EECE0021BFBF /* Photo+CoreDataProperties.m in Sources */,
+				E4D0A52E1EF7EECE0021BFBF /* Model.xcdatamodel in Sources */,
+				E4D0A5361EF7EECE0021BFBF /* Record+CoreDataProperties.m in Sources */,
+				E4D0A56F1EF7EF1C0021BFBF /* PhotoViewController.m in Sources */,
+				E4D0A58D1EF7EF240021BFBF /* AddAccountViewController.m in Sources */,
+				E4D0A5941EF7EF240021BFBF /* EditShopViewController.m in Sources */,
+				E4D0A5911EF7EF240021BFBF /* ClassificationsTableViewController.m in Sources */,
+				E4D0A55F1EF7EF0E0021BFBF /* MainTableViewController.m in Sources */,
+				E4D0A56C1EF7EF1C0021BFBF /* RecordsTableViewController.m in Sources */,
+				E4D0A52F1EF7EECE0021BFBF /* Account+CoreDataClass.m in Sources */,
+				E4D0A5981EF7EF240021BFBF /* SynchronizationTableViewController.m in Sources */,
+				E4D0A56B1EF7EF1C0021BFBF /* AddRecordViewController.m in Sources */,
+				E4D0A5931EF7EF240021BFBF /* EditClassificationViewController.m in Sources */,
+				E4892D5E1EF9055000E9876C /* ContentViewController.m in Sources */,
+				E4D0A5331EF7EECE0021BFBF /* Photo+CoreDataClass.m in Sources */,
+				E4D0A5921EF7EF240021BFBF /* EditAccountViewController.m in Sources */,
+				E4D0A5311EF7EECE0021BFBF /* Classification+CoreDataClass.m in Sources */,
+				E4D0A5551EF7EF000021BFBF /* RecordDao.m in Sources */,
+				E4D0A5961EF7EF240021BFBF /* SettingsTableViewController.m in Sources */,
+				E4D0A5541EF7EF000021BFBF /* PhotoDao.m in Sources */,
+				E4D0A59E1EF7EF2D0021BFBF /* DateSelectorView.m in Sources */,
+				E4D0A5991EF7EF240021BFBF /* TemplatesTableViewController.m in Sources */,
+				E4D0A5571EF7EF000021BFBF /* TemplateDao.m in Sources */,
+				E4D0A5351EF7EECE0021BFBF /* Record+CoreDataClass.m in Sources */,
+				E4D0A5381EF7EECE0021BFBF /* Shop+CoreDataProperties.m in Sources */,
+				E4D0A5A51EF7EF390021BFBF /* AppDelegate.m in Sources */,
+				E4D0A5301EF7EECE0021BFBF /* Account+CoreDataProperties.m in Sources */,
+				E4D0A56D1EF7EF1C0021BFBF /* SelectRecordItemTableViewController.m in Sources */,
+				E4D0A53A1EF7EECE0021BFBF /* Template+CoreDataProperties.m in Sources */,
+				E4D0A5951EF7EF240021BFBF /* MyProfileTableViewController.m in Sources */,
+				E4D0A58F1EF7EF240021BFBF /* AddShopViewController.m in Sources */,
+				E4D0A5391EF7EECE0021BFBF /* Template+CoreDataClass.m in Sources */,
+				E4D0A5531EF7EF000021BFBF /* DaoTemplate.m in Sources */,
+				E4D0A5511EF7EF000021BFBF /* ClassificationDao.m in Sources */,
+				E4D0A5971EF7EF240021BFBF /* ShopsTableViewController.m in Sources */,
+				E4D0A56E1EF7EF1C0021BFBF /* EditRecordViewController.m in Sources */,
+				E4D0A5521EF7EF000021BFBF /* DaoManager.m in Sources */,
+				E4D0A58C1EF7EF240021BFBF /* AccountsTableViewController.m in Sources */,
+				E4D0A5371EF7EECE0021BFBF /* Shop+CoreDataClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,25 +714,6 @@
 			targetProxy = E4D0A5031EF7EEAD0021BFBF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		E4D0A4EA1EF7EEAD0021BFBF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E4D0A4EB1EF7EEAD0021BFBF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E4D0A4EF1EF7EEAD0021BFBF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E4D0A4F01EF7EEAD0021BFBF /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E4D0A5091EF7EEAD0021BFBF /* Debug */ = {
@@ -427,31 +810,45 @@
 		};
 		E4D0A50C1EF7EEAD0021BFBF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73DE2C552FB5CE72F7D22C33 /* Pods-AccountBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = AccountBook/AccountBook.entitlements;
 				DEVELOPMENT_TEAM = 6ANM44X2CJ;
 				INFOPLIST_FILE = AccountBook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.ut.softlab.AccountBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AccountBook/AccountBook-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		E4D0A50D1EF7EEAD0021BFBF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4494CA4001D843E20FC25A4D /* Pods-AccountBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = AccountBook/AccountBook.entitlements;
 				DEVELOPMENT_TEAM = 6ANM44X2CJ;
 				INFOPLIST_FILE = AccountBook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.ut.softlab.AccountBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AccountBook/AccountBook-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		E4D0A50F1EF7EEAD0021BFBF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 6ANM44X2CJ;
 				INFOPLIST_FILE = AccountBookTests/Info.plist;
@@ -465,6 +862,7 @@
 		E4D0A5101EF7EEAD0021BFBF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 6ANM44X2CJ;
 				INFOPLIST_FILE = AccountBookTests/Info.plist;
@@ -478,6 +876,7 @@
 		E4D0A5121EF7EEAD0021BFBF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6ANM44X2CJ;
 				INFOPLIST_FILE = AccountBookUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -490,6 +889,7 @@
 		E4D0A5131EF7EEAD0021BFBF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6ANM44X2CJ;
 				INFOPLIST_FILE = AccountBookUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -518,6 +918,7 @@
 				E4D0A50D1EF7EEAD0021BFBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4D0A50E1EF7EEAD0021BFBF /* Build configuration list for PBXNativeTarget "AccountBookTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +927,7 @@
 				E4D0A5101EF7EEAD0021BFBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4D0A5111EF7EEAD0021BFBF /* Build configuration list for PBXNativeTarget "AccountBookUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +936,7 @@
 				E4D0A5131EF7EEAD0021BFBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
