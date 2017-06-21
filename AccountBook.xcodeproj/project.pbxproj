@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4CB1E1628A8858D0FBEF693B /* Pods_AccountBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 796D66ED6E04B1E19DDCD329 /* Pods_AccountBook.framework */; };
+		E40747051EFA3EF300EA6CAC /* BannerTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40747041EFA3EF300EA6CAC /* BannerTool.swift */; };
 		E4892D5E1EF9055000E9876C /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4892D5D1EF9055000E9876C /* ContentViewController.m */; };
 		E4892D601EF9060C00E9876C /* JSONFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4892D5F1EF9060C00E9876C /* JSONFormatter.swift */; };
 		E4D0A4E31EF7EEAD0021BFBF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D0A4E21EF7EEAD0021BFBF /* main.m */; };
@@ -84,6 +85,8 @@
 		4494CA4001D843E20FC25A4D /* Pods-AccountBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccountBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-AccountBook/Pods-AccountBook.release.xcconfig"; sourceTree = "<group>"; };
 		73DE2C552FB5CE72F7D22C33 /* Pods-AccountBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AccountBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AccountBook/Pods-AccountBook.debug.xcconfig"; sourceTree = "<group>"; };
 		796D66ED6E04B1E19DDCD329 /* Pods_AccountBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AccountBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E40747041EFA3EF300EA6CAC /* BannerTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerTool.swift; sourceTree = "<group>"; };
+		E40747061EFA3F5900EA6CAC /* AccountBook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AccountBook-Bridging-Header.h"; sourceTree = "<group>"; };
 		E4892D5C1EF9055000E9876C /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
 		E4892D5D1EF9055000E9876C /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
 		E4892D5F1EF9060C00E9876C /* JSONFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFormatter.swift; sourceTree = "<group>"; };
@@ -137,7 +140,6 @@
 		E4D0A54D1EF7EF000021BFBF /* ShopDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopDao.m; sourceTree = "<group>"; };
 		E4D0A54E1EF7EF000021BFBF /* TemplateDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateDao.h; sourceTree = "<group>"; };
 		E4D0A54F1EF7EF000021BFBF /* TemplateDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateDao.m; sourceTree = "<group>"; };
-		E4D0A5581EF7EF0E0021BFBF /* AccountBook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AccountBook-Bridging-Header.h"; sourceTree = "<group>"; };
 		E4D0A55A1EF7EF0E0021BFBF /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
 		E4D0A55B1EF7EF0E0021BFBF /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		E4D0A55C1EF7EF0E0021BFBF /* MessagesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesTableViewController.h; sourceTree = "<group>"; };
@@ -259,13 +261,13 @@
 				E4D0A53C1EF7EEDE0021BFBF /* Main */,
 				E4D0A53B1EF7EED90021BFBF /* Dao */,
 				E4D0A5141EF7EEC10021BFBF /* Model */,
+				E4D0A4E11EF7EEAD0021BFBF /* Supporting Files */,
 				E4D0A5A01EF7EF390021BFBF /* AppDelegate.h */,
 				E4D0A5A11EF7EF390021BFBF /* AppDelegate.m */,
 				E4D0A5A21EF7EF390021BFBF /* Main.storyboard */,
 				E4D0A5A31EF7EF390021BFBF /* Assets.xcassets */,
 				E4D0A5A41EF7EF390021BFBF /* LaunchScreen.storyboard */,
 				E4D0A4F21EF7EEAD0021BFBF /* Info.plist */,
-				E4D0A4E11EF7EEAD0021BFBF /* Supporting Files */,
 			);
 			path = AccountBook;
 			sourceTree = "<group>";
@@ -273,7 +275,7 @@
 		E4D0A4E11EF7EEAD0021BFBF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E4D0A5581EF7EF0E0021BFBF /* AccountBook-Bridging-Header.h */,
+				E40747061EFA3F5900EA6CAC /* AccountBook-Bridging-Header.h */,
 				E4D0A4E21EF7EEAD0021BFBF /* main.m */,
 			);
 			name = "Supporting Files";
@@ -420,6 +422,7 @@
 		E4D0A53F1EF7EEF10021BFBF /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				E40747041EFA3EF300EA6CAC /* BannerTool.swift */,
 				E4D0A59A1EF7EF2D0021BFBF /* DateSelectorView.h */,
 				E4D0A59B1EF7EF2D0021BFBF /* DateSelectorView.m */,
 				E4D0A59C1EF7EF2D0021BFBF /* DateTool.h */,
@@ -643,6 +646,7 @@
 				E4D0A5321EF7EECE0021BFBF /* Classification+CoreDataProperties.m in Sources */,
 				E4D0A5901EF7EF240021BFBF /* AddTemplateViewController.m in Sources */,
 				E4D0A5341EF7EECE0021BFBF /* Photo+CoreDataProperties.m in Sources */,
+				E40747051EFA3EF300EA6CAC /* BannerTool.swift in Sources */,
 				E4D0A52E1EF7EECE0021BFBF /* Model.xcdatamodel in Sources */,
 				E4D0A5361EF7EECE0021BFBF /* Record+CoreDataProperties.m in Sources */,
 				E4D0A56F1EF7EF1C0021BFBF /* PhotoViewController.m in Sources */,

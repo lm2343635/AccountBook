@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "AccountBook-Bridging-Header.h"
+#import "AccountBook-Swift.h"
 #import "Grouper.h"
 
 @interface AppDelegate ()
@@ -101,9 +101,9 @@
     NSString *category = [aps valueForKey:@"category"];
     if ([category isEqualToString:@"message"]) {
         [self sync];
-//        [BannerTool showWithTitle:nil
-//                         subtitle:[aps valueForKey:@"alert"]
-//                            image:nil];
+        [BannerTool showWithTitle:nil
+                         subtitle:[aps valueForKey:@"alert"]
+                            image:nil];
     }
 }
 

@@ -5,7 +5,7 @@ target 'AccountBook' do
     pod 'UIImageView+Extension', '~> 0.2'
     pod 'M80AttributedLabel', '~> 1.6'
     pod 'UILabel+Copyable', '~> 1.0'
-    pod 'Grouper', :path => '/Users/limeng/Documents/Xcode/Grouper'
+    pod 'Grouper', '~> 1.0' #:path => '/Users/limeng/Documents/Xcode/Grouper'
 end
 
 post_install do |installer|
