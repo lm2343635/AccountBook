@@ -1,4 +1,5 @@
 use_frameworks!
+platform :ios, '9.0'
 
 target 'AccountBook' do
     pod 'MJRefresh', '~> 3.1'
