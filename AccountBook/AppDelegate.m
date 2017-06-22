@@ -43,14 +43,7 @@
     [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:1800];
 
     // Use storyboard by init state.
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    if (grouper.group.defaults.initial != InitialFinished) {
-        NSBundle *podBundle = [NSBundle bundleForClass:Grouper.self];
-        
-        NSBundle *bundle = [NSBundle bundleWithURL:[podBundle URLForResource:@"Grouper" withExtension:@"bundle"]];
-        storyboard = [UIStoryboard storyboardWithName:@"Init" bundle:bundle];
-    }
-
+    UIStoryboard *storyboard = [grouper.group isInitialized] ? [UIStoryboard storyboardWithName:@"Main" bundle:nil] : grouper.ui.groupInit;
     // Set root view controller and make windows visible
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = [storyboard instantiateInitialViewController];
