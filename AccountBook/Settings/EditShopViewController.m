@@ -47,9 +47,6 @@
     }
     // Update shop.
     _shop.sname = sname;
-    _shop.updater = grouper.group.currentUser.email;
-    _shop.updateAt = [NSDate date];
-    [dao saveContext];
     
     // Send shares to untrusted servers.
     [grouper.sender update:_shop];

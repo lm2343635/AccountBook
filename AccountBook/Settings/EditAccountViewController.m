@@ -47,9 +47,6 @@
     
     // Update account.
     _account.aname = _anameTextField.text;
-    _account.updater = grouper.group.currentUser.email;
-    _account.updateAt = [NSDate date];
-    [dao saveContext];
     
     // Send shares.
     [grouper.sender update:_account];

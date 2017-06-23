@@ -7,8 +7,8 @@ target 'AccountBook' do
     pod 'M80AttributedLabel', '~> 1.6'
     pod 'UILabel+Copyable', '~> 1.0'
     pod 'BRYXBanner', '~> 0.7'
-#   pod 'Grouper', '~> 1.0'
-    pod 'Grouper', :path => '/Users/limeng/Documents/Xcode/Grouper'
+    pod 'Grouper', '~> 1.1'
+#    pod 'Grouper', :path => '/Users/limeng/Documents/Xcode/Grouper'
 end
 
 post_install do |installer|

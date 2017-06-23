@@ -149,7 +149,7 @@
 }
 
 #pragma mark - Action
--(void)save:(id)sender {
+- (void)save:(id)sender {
     if (DEBUG) {
         NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     }
@@ -161,7 +161,7 @@
             _record.photo.data = UIImageJPEGRepresentation(_photoImage, 1.0);
         }
     }
-    if(![_remarkTextView.text isEqualToString:@""]) {
+    if (![_remarkTextView.text isEqualToString:@""]) {
         _record.remark = _remarkTextView.text;
     }
     _record.money = [NSNumber numberWithInt:_moneyTextFeild.text.intValue];
@@ -182,7 +182,7 @@
 }
 
 - (IBAction)selectClassification:(id)sender {
-    if(DEBUG) {
+    if (DEBUG) {
         NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     }
     _item = nil;
@@ -191,7 +191,7 @@
 }
 
 - (IBAction)selectAccount:(id)sender {
-    if(DEBUG) {
+    if (DEBUG) {
         NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     }
     _item = nil;
@@ -200,7 +200,7 @@
 }
 
 - (IBAction)selectShop:(id)sender {
-    if(DEBUG) {
+    if (DEBUG) {
         NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     }
     _item = nil;
@@ -209,13 +209,12 @@
 }
 
 - (IBAction)selectTime:(id)sender {
-    if(DEBUG) {
+    if (DEBUG) {
         NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     }
     _selectTimeButton.enabled = NO;
 
 }
-
 
 - (IBAction)takePhoto:(id)sender {
     if(DEBUG) {

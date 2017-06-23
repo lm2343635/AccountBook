@@ -47,9 +47,6 @@
     }
     // Update classification.
     _classification.cname = cname;
-    _classification.updater = grouper.group.currentUser.email;
-    _classification.updateAt = [NSDate date];
-    [dao saveContext];
     
     // Send shares to untrusted servers.
     [grouper.sender update:_classification];

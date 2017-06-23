@@ -15,17 +15,17 @@
 @implementation PhotoViewController
 
 - (void)viewDidLoad {
-    if(DEBUG) {
+    if (DEBUG) {
         NSLog(@"Running %@ '%@'",self.class,NSStringFromSelector(_cmd));
     }
     [super viewDidLoad];
-    self.photoImageView.image=self.image;
-    self.photoImageView.contentMode=UIViewContentModeScaleAspectFit;
+    self.photoImageView.image = self.image;
+    self.photoImageView.contentMode = UIViewContentModeScaleAspectFit;
 }
 
 #pragma mark - Action
 - (IBAction)back:(id)sender {
-    if(DEBUG) {
+    if (DEBUG) {
         NSLog(@"Running %@ '%@'",self.class,NSStringFromSelector(_cmd));
     }
     [self dismissViewControllerAnimated:YES completion:nil];
