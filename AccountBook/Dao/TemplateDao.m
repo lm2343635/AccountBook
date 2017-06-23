@@ -14,8 +14,7 @@
                        andRecordType:(NSNumber *)recordType
                    andClassification:(Classification *)classification
                           andAccount:(Account *)account
-                             andShop:(Shop *)shop
-                             creator:(NSString *)creator {
+                             andShop:(Shop *)shop {
     if(DEBUG) {
         NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     }
@@ -26,9 +25,6 @@
     template.classification = classification;
     template.account = account;
     template.shop = shop;
-    
-    template.creator = creator;
-    template.updater = creator;
     [self saveContext];
     return template;
 }

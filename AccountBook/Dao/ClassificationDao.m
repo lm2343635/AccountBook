@@ -10,15 +10,13 @@
 
 @implementation ClassificationDao
 
-- (Classification *)saveWithName:(NSString *)cname creator:(NSString *)creator {
+- (Classification *)saveWithName:(NSString *)cname {
     if(DEBUG) {
         NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     }
     Classification *classification = [NSEntityDescription insertNewObjectForEntityForName:ClassificationEntityName
                                                                    inManagedObjectContext:self.context];
     classification.cname = cname;
-    classification.creator = creator;
-    classification.updater = creator;
     [self saveContext];
     return classification;
 }

@@ -16,8 +16,7 @@
         andClassification:(Classification *)classsification
                andAccount:(Account *)account
                   andShop:(Shop *)shop
-                 andPhoto:(Photo *)photo
-                  creator:(NSString *)creator {
+                 andPhoto:(Photo *)photo {
     if (DEBUG) {
         NSLog(@"Running %@ '%@'",self.class,NSStringFromSelector(_cmd));
     }
@@ -30,8 +29,6 @@
     record.account = account;
     record.shop = shop;
     record.photo = photo;
-    record.creator = creator;
-    record.updater = creator;
     [self saveContext];
     return record;
 }

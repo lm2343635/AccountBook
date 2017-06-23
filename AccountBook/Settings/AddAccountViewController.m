@@ -38,8 +38,7 @@
         [self showTip:@"Account name is empty!"];
         return;
     }
-    Account *account = [dao.accountDao saveWithName:_anameTextField.text
-                                            creator:grouper.group.currentUser.email];
+    Account *account = [dao.accountDao saveWithName:_anameTextField.text];
     [grouper.sender update:account];
     [self.navigationController popViewControllerAnimated:YES];
 }

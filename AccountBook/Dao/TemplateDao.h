@@ -16,8 +16,7 @@
                        andRecordType:(NSNumber *)recordType
                    andClassification:(Classification *)classification
                           andAccount:(Account *)account
-                             andShop:(Shop *)shop
-                             creator:(NSString *)creator;
+                             andShop:(Shop *)shop;
 
 - (NSArray *)findAll;
 

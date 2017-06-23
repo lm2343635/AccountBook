@@ -12,7 +12,7 @@
 
 @interface PhotoDao : DaoTemplate
 
-//新建照片使用
+// For new photo
 - (NSManagedObjectID *)saveWithData:(NSData *)pdata;
 
 @end

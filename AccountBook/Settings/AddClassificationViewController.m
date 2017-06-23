@@ -40,8 +40,7 @@
         return;
     }
 
-    Classification *classification = [dao.classificationDao saveWithName: _cnameTextField.text
-                                                                 creator:grouper.group.currentUser.email];
+    Classification *classification = [dao.classificationDao saveWithName: _cnameTextField.text];
     [grouper.sender update:classification];
     [self.navigationController popViewControllerAnimated:YES];
 }

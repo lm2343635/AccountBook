@@ -39,8 +39,7 @@
         return;
     }
     // Save shop.
-    Shop *shop = [dao.shopDao saveWithName:_snameTextField.text
-                                   creator:grouper.group.currentUser.email];
+    Shop *shop = [dao.shopDao saveWithName:_snameTextField.text];
     // Send shares.
     [grouper.sender update:shop];
     [self.navigationController popViewControllerAnimated:YES];

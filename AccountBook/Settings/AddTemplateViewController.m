@@ -114,8 +114,7 @@
                                           andRecordType:_recordType
                                       andClassification:_selectedClassification
                                              andAccount:_selectedAccount
-                                                andShop:_selectedShop
-                                                creator:grouper.group.currentUser.email];
+                                                andShop:_selectedShop];
     [grouper.sender update:template];
     [self.navigationController popViewControllerAnimated:YES];
 }

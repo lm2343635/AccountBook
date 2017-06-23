@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SyncEntity+CoreDataClass.h"
+#import "SyncEntity.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -10,15 +10,13 @@
 
 @implementation ShopDao
 
-- (Shop *)saveWithName:(NSString *)sname creator:(NSString *)creator {
+- (Shop *)saveWithName:(NSString *)sname {
     if (DEBUG) {
         NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     }
     Shop *shop = [NSEntityDescription insertNewObjectForEntityForName:ShopEntityName
                                                inManagedObjectContext:self.context];
     shop.sname = sname;
-    shop.creator = creator;
-    shop.updater = creator;
     [self saveContext];
     return shop;
 }

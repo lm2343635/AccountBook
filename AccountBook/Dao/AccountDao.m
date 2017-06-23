@@ -10,15 +10,13 @@
 
 @implementation AccountDao
 
-- (Account *)saveWithName:(NSString *)aname creator:(NSString *)creator {
+- (Account *)saveWithName:(NSString *)aname {
     if (DEBUG) {
         NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     }
     Account *account = [NSEntityDescription insertNewObjectForEntityForName:AccountEntityName
                                                      inManagedObjectContext:self.context];
     account.aname = aname;
-    account.creator = creator;
-    account.updater = creator;
     [self saveContext];
     return account;
 }

@@ -18,8 +18,7 @@
         andClassification:(Classification *)classsification
                andAccount:(Account *)account
                   andShop:(Shop *)shop
-                 andPhoto:(Photo *)photo
-                  creator:(NSString *)creator;
+                 andPhoto:(Photo *)photo;
 
 - (NSArray *)findAll;
 

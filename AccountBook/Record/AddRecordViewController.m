@@ -173,8 +173,7 @@
                                 andClassification:_selectedClassification
                                        andAccount:_selectedAccount
                                           andShop:_selectedShop
-                                         andPhoto:photo
-                                          creator:grouper.group.currentUser.email];
+                                         andPhoto:photo];
     
     // Revoke update method in sender to send an update message.
     [grouper.sender update:record];
