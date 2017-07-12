@@ -29,8 +29,9 @@
     
     grouper = [Grouper sharedInstance];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    [grouper setupWithAppDataStack:[self dataStack]
-                    mainStoryboard:storyboard];
+    [grouper setupWithAppId:@"accountbook"
+                  dataStack:[self dataStack]
+             mainStoryboard:storyboard];
 
     if (DEBUG) {
         GroupManager *group = grouper.group;
