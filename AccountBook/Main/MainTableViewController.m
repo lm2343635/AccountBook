@@ -157,7 +157,7 @@
         if (grouper.group.defaults.initial == InitialFinished) {
             cell = [tableView dequeueReusableCellWithIdentifier:@"serverIdentifier" forIndexPath:indexPath];
             UILabel *serverAddressLabel = (UILabel *)[cell viewWithTag:1];
-            serverAddressLabel.text = [grouper.group.defaults.servers.allKeys objectAtIndex:indexPath.row];
+            serverAddressLabel.text = [grouper.group.defaults.servers objectAtIndex:indexPath.row];
             
             [stateImageViews setObject:(UIImageView *)[cell viewWithTag:2]
                                 forKey:serverAddressLabel.text];
@@ -225,7 +225,8 @@
         if (sync) {
             [syncImageView startRotate:2 withClockwise:NO];
             // Refresh members list before data sync
-            [grouper.receiver receiveWithCompletion:^{
+
+            [grouper.receiver receiveWithCompletion:^(int success, Processing *processing) {
                 [syncImageView stopRotate];
             }];
             

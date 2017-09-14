@@ -37,8 +37,8 @@
         GroupManager *group = grouper.group;
         NSLog(@"Number of group members is %ld, threshold is %ld, deletion interval time is %ldm", (long)group.members, (long)group.defaults.threshold, (long)group.defaults.interval);
         NSLog(@"Group id is %@, group name is %@, group owner is %@", group.defaults.groupId, group.defaults.groupName, group.defaults.owner);
-        for (NSString *address in group.defaults.servers.allKeys) {
-            NSLog(@"Untrusted server %@, access key is %@", address, group.defaults.servers[address]);
+        for (NSString *address in group.defaults.servers) {
+            NSLog(@"Untrusted server %@", address);
         }
     }
     
@@ -142,8 +142,8 @@
         NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     }
     [grouper.group checkServerState:^(NSDictionary *serverStates, BOOL sync) {
-        if (sync) {
-            [grouper.receiver receiveWithCompletion:^{
+        if (sync) { 
+            [grouper.receiver receiveWithCompletion:^(int success, Processing *processing) {
                 if (DEBUG) {
                     NSLog(@"Sync ended...");
                 }
