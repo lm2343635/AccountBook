@@ -30,6 +30,7 @@
     grouper = [Grouper sharedInstance];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     [grouper setupWithAppId:@"accountbook"
+                   entities:[NSArray arrayWithObjects:@"Classification", @"Account", @"Shop", @"Photo", @"Template", @"Record", nil]
                   dataStack:[self dataStack]
              mainStoryboard:storyboard];
 
