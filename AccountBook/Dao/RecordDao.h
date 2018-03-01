@@ -13,12 +13,12 @@
 @interface RecordDao : DaoTemplate
 
 - (Record *)saveWithMoney:(NSNumber *)money
-                andRemark:(NSString *)remark
-                  andTime:(NSDate *)time
-        andClassification:(Classification *)classsification
-               andAccount:(Account *)account
-                  andShop:(Shop *)shop
-                 andPhoto:(Photo *)photo;
+                   remark:(NSString *)remark
+                     time:(NSDate *)time
+           classification:(Classification *)classsification
+                  account:(Account *)account
+                     shop:(Shop *)shop
+                    photo:(Photo *)photo ;
 
 - (NSArray *)findAll;
 

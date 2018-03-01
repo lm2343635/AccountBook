@@ -168,14 +168,14 @@
     
     // Save record to app local persistent store.
     Record *record = [dao.recordDao saveWithMoney:money
-                                        andRemark:_remarkTextView.text
-                                          andTime:_selectedTime
-                                andClassification:_selectedClassification
-                                       andAccount:_selectedAccount
-                                          andShop:_selectedShop
-                                         andPhoto:photo];
+                                           remark:_remarkTextView.text
+                                             time:_selectedTime
+                                   classification:_selectedClassification
+                                          account:_selectedAccount
+                                             shop:_selectedShop
+                                            photo:photo];
     
-    // Revoke update method in sender to send an update message.
+    // Invoke update method in sender to send an update message.
     [grouper.sender update:record];
     
     [self.navigationController popViewControllerAnimated:YES];
