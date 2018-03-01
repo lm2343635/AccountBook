@@ -230,13 +230,11 @@
                 [syncImageView stopRotate];
             }];
             
-            // If client can get access to all untrusted server(therdhold is n),
-            // send a confirm message to unstrusted servers.
             long now = (long)[[NSDate date] timeIntervalSince1970];
-            // If client sent control message before interval time, send control message again
+            // If the time difference between now and the last time is longer than the TTL defined by user, Account Book will send a confirm message.
             if (now - grouper.group.defaults.controlMessageSendTime > grouper.group.defaults.interval * 60) {
                 [grouper.sender confirm];
-                // Update control message sene time.
+                // Update the last time to send a confirm message.
                 grouper.group.defaults.controlMessageSendTime = now;
             }
         }
